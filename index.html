@@ -30,6 +30,17 @@
     <link rel="stylesheet" type="text/css" href="assets/css/virtual.css">
 
     <link rel="stylesheet" type="text/css" href="assets/css/minibar.virtual.css">
+    <script>
+        function calculateAge() {
+          var currentYear = new Date().getFullYear();
+          
+          var birthYear = 1999;
+          
+          var age = currentYear - birthYear;
+          
+          document.getElementById("age").innerHTML = age;
+        }
+      </script>    
 </head>
 
 <body class="theme-blue">
@@ -128,8 +139,11 @@
                             <ul class="theme-list">
                                 <li class="fg-dark"><b>From:</b> Banda Aceh, ID</li>
                                 <li class="fg-dark"><b>Lives In:</b> Yogyakarta, ID</li>
-                                <li class="fg-dark"><b>Age:</b> 22</li>
+                                <li class="fg-dark"><b>Age:</b> <span id="age"></span></li>
                                 <li class="fg-dark"><b>Gender:</b> Male</li>
+                                <script>
+                                    calculateAge();
+                                </script>
                             </ul>
                             <a href="assets/CV.pdf" download>
                                 <button class="btn btn-theme btn-rounded">Download CV</button>
